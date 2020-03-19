@@ -23,7 +23,7 @@ public class Opus {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);//test
+        MinecraftForge.EVENT_BUS.register(this);
     }
     
     private void setup(final FMLCommonSetupEvent event)
