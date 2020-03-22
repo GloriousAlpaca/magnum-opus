@@ -1,5 +1,6 @@
 package mod.opus;
 
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,6 +21,7 @@ public class Opus {
     public Opus() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -29,4 +31,6 @@ public class Opus {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
     }
+
+    private void doClientStuff(final FMLClientSetupEvent event){}
 }
