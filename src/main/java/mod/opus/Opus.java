@@ -13,8 +13,6 @@ public class Opus {
 	
 	/*Mod Identifiers*/
 	public static final String MODID = "opus";
-    public static final String NAME = "magnum opus";
-    public static final String VERSION = "1.0";
     
 	// Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
