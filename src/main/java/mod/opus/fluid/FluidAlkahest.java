@@ -58,13 +58,6 @@ public class FluidAlkahest extends FlowingFluid{
 	}
 
 	@Override
-	protected boolean func_215665_a(IFluidState p_215665_1_, IBlockReader p_215665_2_, BlockPos p_215665_3_,
-			Fluid p_215665_4_, Direction p_215665_5_) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
 	public int getTickRate(IWorldReader p_205569_1_) {
 		// TODO Auto-generated method stub
 		return 0;
@@ -118,5 +111,12 @@ public class FluidAlkahest extends FlowingFluid{
 	         return true;
 	      }
 	   }
+
+	@Override
+	protected boolean canDisplace(IFluidState p_215665_1_, IBlockReader p_215665_2_, BlockPos p_215665_3_,
+			Fluid p_215665_4_, Direction p_215665_5_) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	   
 }
