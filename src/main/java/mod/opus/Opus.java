@@ -10,6 +10,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(Opus.MODID)
+@Mod.EventBusSubscriber(modid = Opus.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Opus {
 	
 	/*Mod Identifiers*/
