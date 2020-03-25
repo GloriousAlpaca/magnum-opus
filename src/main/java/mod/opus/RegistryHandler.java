@@ -59,9 +59,9 @@ public class RegistryHandler {
 	public static final RegistryObject<Block> SALTORE_BLOCK = BLOCKS.register("saltore",() -> new BasicOre().ore());
 
 	//Register Items
-	//public static final RegistryObject<Item> SULFUREORE_ITEM = ITEMS.register("sulfureore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
-	//public static final RegistryObject<Item> CINNABARORE_ITEM = ITEMS.register("cinnabarore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
-	//public static final RegistryObject<Item> SALTORE_ITEM = ITEMS.register("saltore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
+	public static final RegistryObject<Item> SULFUREORE_ITEM = ITEMS.register("sulfureore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
+	public static final RegistryObject<Item> CINNABARORE_ITEM = ITEMS.register("cinnabarore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
+	public static final RegistryObject<Item> SALTORE_ITEM = ITEMS.register("saltore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
 
 	public static void registerall(){
 
