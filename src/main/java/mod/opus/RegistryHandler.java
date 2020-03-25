@@ -1,6 +1,5 @@
 package mod.opus;
 
-import mod.opus.blocks.BasicOre;
 import mod.opus.blocks.BlockHolder;
 import mod.opus.util.ItemHelper;
 import net.minecraft.block.Block;
@@ -17,6 +16,7 @@ import static mod.opus.Opus.MODID;
 
 //@Mod.EventBusSubscriber
 public class RegistryHandler {
+	
 	/**
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
