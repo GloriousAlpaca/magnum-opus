@@ -9,6 +9,6 @@ public class ItemHelper {
 
 	
 	public static BlockItem ItemfromBlock(Block p) {
-		return (BlockItem) new BlockItem(p, (new Item.Properties()).group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(p.getRegistryName());
+		return (BlockItem) new BlockItem(p, (new Item.Properties()).group(ItemGroup.BUILDING_BLOCKS));
 	}
 }
