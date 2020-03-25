@@ -2,7 +2,7 @@ package mod.opus.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraftforge.registries.ObjectHolder;
-
+/**
 @ObjectHolder("opus")
 public class BlockHolder {
 
@@ -15,3 +15,4 @@ public class BlockHolder {
 	@ObjectHolder("opus:saltore")
 	public static final Block saltore = null;
 }
+**/
