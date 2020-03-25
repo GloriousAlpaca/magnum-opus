@@ -50,16 +50,16 @@ public class RegistryHandler {
 **/
 	
 	//Register
-	private static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, MODID);
     private static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, MODID);
+	private static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, MODID);
     
 	//Register Blocks
-	public static final RegistryObject<Block> SULFUREORE_BLOCK = BLOCKS.register("sulfureore",() -> new Block(Block.Properties.create(Material.ROCK).lightValue(0).hardnessAndResistance(3,15).harvestLevel(1).harvestTool(net.minecraftforge.common.ToolType.PICKAXE)));
+	public static final RegistryObject<Block> SULFUREORE_BLOCK = BLOCKS.register("sulfurore",() -> new Block(Block.Properties.create(Material.ROCK).lightValue(0).hardnessAndResistance(3,15).harvestLevel(1).harvestTool(net.minecraftforge.common.ToolType.PICKAXE)));
 	public static final RegistryObject<Block> CINNABARORE_BLOCK = BLOCKS.register("cinnabarore",() -> new Block(Block.Properties.create(Material.ROCK).lightValue(0).hardnessAndResistance(3,15).harvestLevel(1).harvestTool(net.minecraftforge.common.ToolType.PICKAXE)));
-	public static final RegistryObject<Block> SALTORE_BLOCK = BLOCKS.register("saltore",() ->new Block(Block.Properties.create(Material.ROCK).lightValue(0).hardnessAndResistance(3,15).harvestLevel(1).harvestTool(net.minecraftforge.common.ToolType.PICKAXE)));
+	public static final RegistryObject<Block> SALTORE_BLOCK = BLOCKS.register("saltore",() -> new Block(Block.Properties.create(Material.ROCK).lightValue(0).hardnessAndResistance(3,15).harvestLevel(1).harvestTool(net.minecraftforge.common.ToolType.PICKAXE)));
 
 	//Register Items
-	public static final RegistryObject<Item> SULFUREORE_ITEM = ITEMS.register("sulfureore",() -> ItemHelper.ItemfromBlock(BlockHolder.sulfurore));
+	public static final RegistryObject<Item> SULFUREORE_ITEM = ITEMS.register("sulfurore",() -> ItemHelper.ItemfromBlock(BlockHolder.sulfurore));
 	public static final RegistryObject<Item> CINNABARORE_ITEM = ITEMS.register("cinnabarore",() -> ItemHelper.ItemfromBlock(BlockHolder.cinnabarore));
 	public static final RegistryObject<Item> SALTORE_ITEM = ITEMS.register("saltore",() -> ItemHelper.ItemfromBlock(BlockHolder.saltore));
 
