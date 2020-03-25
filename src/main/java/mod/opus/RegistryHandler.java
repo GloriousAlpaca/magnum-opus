@@ -1,17 +1,23 @@
 package mod.opus;
 
-import mod.opus.blocks.BlockHolder;
+import mod.opus.blocks.BasicOre;
+
 import mod.opus.util.ItemHelper;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber
+import net.minecraft.item.Item;
+
+import net.minecraftforge.fml.RegistryObject;
+
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import static mod.opus.Opus.MODID;
+
+//@Mod.EventBusSubscriber
 public class RegistryHandler {
-	
+	/**
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		
@@ -41,5 +47,26 @@ public class RegistryHandler {
 	    		ItemHelper.ItemfromBlock(BlockHolder.saltore)
 	    		);
 	}
-	
+**/
+	//Register
+	private static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, MODID);
+    private static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, MODID);
+
+
+	//Register Blocks
+	public static final RegistryObject<Block> SULFUREORE_BLOCK = BLOCKS.register("sulfureore",() -> new BasicOre().ore());
+	public static final RegistryObject<Block> CINNABARORE_BLOCK = BLOCKS.register("cinnabarore",() -> new BasicOre().ore());
+	public static final RegistryObject<Block> SALTORE_BLOCK = BLOCKS.register("saltore",() -> new BasicOre().ore());
+
+	//Register Items
+	//public static final RegistryObject<Item> SULFUREORE_ITEM = ITEMS.register("sulfureore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
+	//public static final RegistryObject<Item> CINNABARORE_ITEM = ITEMS.register("cinnabarore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
+	//public static final RegistryObject<Item> SALTORE_ITEM = ITEMS.register("saltore",() -> new ItemHelper().ItemfromBlock(new BasicOre().ore()));
+
+	public static void registerall(){
+
+		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+	}
+
 }

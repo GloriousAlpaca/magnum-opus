@@ -12,7 +12,6 @@ public class OreGen {
 
     public static void generateOre(){
 
-        Biome biome = (Biome) ForgeRegistries.BIOMES;
-        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.place());
+
     }
 }
